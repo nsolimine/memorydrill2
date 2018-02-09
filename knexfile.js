@@ -1,3 +1,4 @@
+require("dotenv").load();
 
 module.exports = {
 
@@ -8,6 +9,6 @@ module.exports = {
 
   production: {
     client: 'pg',
-    connection: process.env.DATABASE_URL
+    connection: `${process.env.DATABASE_URL}?ssl=true`
   }
 };
